@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COST OF EURO AREA MEMBERSHIP</title>
+  <meta charset="utf-8">
+  <meta name="description" content="COST OF EURO AREA MEMBERSHIP">
+  <meta name="author" content="Gian Balsamo, Ph.D.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
+<link rel=stylesheet href="libraries/widgets/morris/css/morris.css"></link>
+<link rel=stylesheet href="libraries/widgets/xcharts/css/xcharts.min.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+<script src="libraries/widgets/morris/js/raphael-2.1.0.min.js"></script>
+<script src="libraries/widgets/morris/js/morris.min.js"></script>
+<script src="libraries/widgets/xcharts/js/d3.v2.min.js"></script>
+<script src="libraries/widgets/xcharts/js/xcharts.min.js"></script>
+<script src="libraries/widgets/highcharts/js/jquery-1.9.1.min.js"></script>
+<script src="libraries/widgets/highcharts/js/highcharts.js"></script>
+<script src="libraries/widgets/highcharts/js/highcharts-more.js"></script>
+<script src="libraries/widgets/highcharts/js/exporting.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>COST OF EURO AREA MEMBERSHIP</h1>
+    <h2>Turkey after the Global Financial Crisis</h2>
+    <p>Gian Balsamo, Ph.D.<br/>Day Light Organization</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="Executive" id="slide-1" style="background:;">
+  <hgroup>
+    <h1>Executive Summary</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>In spite of being “one of the hardest hit emerging economies by the global financial crisis,” Turkey was able to soften considerably the effects of the recession by means of an expansionary monetary policy. This policy was aggressively deployed, starting November 2008, by the Central Bank of the Republic of Turkey (CBRT).<br>
+Given Turkey’s persistent aim at being granted EU membership, this study is aimed at quantifying the disadvantageous impact that a hypothetical Euro Area membership would have had on Turkey’s monetary policy. The Euro Area includes the nineteen countries that have adopted the euro as their currency.<br>
+A countercyclical and discretionary monetary policy is usually captured by changes in the short-term interest rate and the exchange rate. This is especially true in the case of a country such as Turkey that, starting from the 2001 crisis (noticeably, seven years before the beginning of the 2008 recession), purposefully adopted floating exchange rates and a robust inflation-targeting regime.<br>
+This monetary policy softened to a significant degree the medium-term impact of the global financial crisis.  This study adopts the increments of money supply as a proxy of the CBRT’s pro-active interventions on interest rates and purposeful non-intervention on exchange rates. More specifically, increments/decrements of money supply are here treated as reasonably faithful indicators of a countercyclical leverage which is unavailable, by definition, to the central banks of Euro Area members.   </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <article data-timings="">
+    <p>In the following slides <strong>a cost function</strong> is defined and measured in terms of <strong>the ratio of the CBRT’s yearly increase in money supply over the analogous aggregate increase of its European counterparts</strong>. The data consist of OECD monthly monetary aggregates from 1992 to 2014, and include currency narrowly defined, i.e. banknotes and coins, plus overnight deposits; they are measured as a seasonally adjusted index based on 2010=100 [see OECD2015].<br>
+The next few slides describe the rationale and the algorithm of the cost function, and provide a concise user guide to the cost-function application. The cost-function application enables the user to compute year-by-year the cost of an hypotethical EU membership to Turkey. (Caveat: The cost function misfires for 2010-05-01 and 2010-06-01 because of the following incongruence in the OECD time series: they equate the 2010 money supply with the index 100, but being monthly data, they do not reach the value of 100 at the same time: the Turkish money supply touches 100 between June 2010 (98.63) and July 2010 (100.53), while the Euro Area money supply touches 100 one month earlier, between May 2010 (99.97) and June 2010 (100.79).) 
+The cost function is deployed at this site: (<a href="https://gianbalsamo.shinyapps.io/moreComplexShinyApplication">https://gianbalsamo.shinyapps.io/moreComplexShinyApplication</a>)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h1>A &quot;Literate Statistics&quot; R Chunk</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>The chart in the next slide, obtained from the following R program, plots the increase in money supply for Turkey and the Euro Area from 1992 to 2014, with the 2010 value serving as the 100 index. The decreasing/increasing gap between the two curves of the previous slide is a rough but suggestive indicator of the steady extent whereby Turkey’s monetary policy has been more expansionary than the Euro Area’s for the last fifteen years.  </p>
+
+<pre><code class="r">require(rCharts)
+moneySupply&lt;-read.csv(&#39;Turkey_vs_EuroArea.csv&#39;,header = TRUE)
+moneySupply&lt;-moneySupply[,c(&quot;LOCATION&quot;,&quot;TIME&quot;,&quot;Value&quot;)]
+moneySupply[,&quot;TIME&quot;]&lt;-paste(moneySupply[,&quot;TIME&quot;],&quot;01&quot;,sep=&quot;-&quot;)
+M1Turkey&lt;-moneySupply[moneySupply[,&quot;LOCATION&quot;]==&quot;TUR&quot;,c(&quot;TIME&quot;,&quot;LOCATION&quot;,&quot;Value&quot;)]
+M1EuroArea&lt;-moneySupply[moneySupply[,&quot;LOCATION&quot;]==&quot;EA19&quot;,c(&quot;TIME&quot;,&quot;LOCATION&quot;,&quot;Value&quot;)]
+compactM1&lt;-cbind(M1Turkey,M1EuroArea[c(&quot;LOCATION&quot;,&quot;Value&quot;)])
+colnames(compactM1)[3]&lt;-&quot;ValueTurkey&quot;
+colnames(compactM1)[5]&lt;-&quot;ValueEuroArea&quot;
+compact&lt;-compactM1[,c(1,3,5)]
+m1 &lt;- mPlot(x = &quot;TIME&quot;, y = c(&quot;ValueTurkey&quot;,&quot;ValueEuroArea&quot;), type = &quot;Line&quot;, data =compactM1)
+m1$save(&#39;test.html&#39;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h1>INTERACTIVE CHART: Money Supply (1992-2014), Turkey versus Euro Area</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>By hovering the cursor over the chart, you can see and compare monthly distinctive values.  </p>
+
+<iframe src = '/Users/gianfrancobalsamo/Dropbox/BIG_DATA/DevelopingDataProducts/slidify/fridayMorning/mySlidePresentation/test.html'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    <p>In the previous slide, because of the difference in the two curves&#39; gradient, their gap bespeaks a more expansionary policy, hence a more aggressive increase in money supply on Turkey’s part, both <strong>before</strong> and <strong>after</strong> the 2010 index year – starting, that is, around 2001, at a time when the CBRT’s monetary policy departed radically from that of previous years.<br>
+As to the cost computed by the cost function, it is expressed by the following formula:<br>
+\[COST = [(MT_{t} – MT_{2010})/MT_{2010}]/[(ME_{t} – ME_{2010})/ME_{2010}]\]
+where:<br>
+MT = Turkish money supply.<br>
+ME = Euro Area money supply.<br>
+COST = ratio of Turkish increase rate in money supply over Euro Area’s increase rate in money supply.<br>
+<strong>This “cost” is a multiplier, in the sense that a typical cost over our time series, equal, say, to 4 or 5, indicates that on a certain time interval Turkey’s money supply increased four or five times faster that of the Euro Area – indicating thereby, by implication, the extent to which Turkey would have been penalized in its expansionary monetary policies by a hypothetical Euro Area membership.</strong>  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Executive Summary'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='A &quot;Literate Statistics&quot; R Chunk'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='INTERACTIVE CHART: Money Supply (1992-2014), Turkey versus Euro Area'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='NA'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
